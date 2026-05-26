@@ -1,12 +1,12 @@
 import {
-    StyleSheet,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    View,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
 } from "react-native";
 
-import { router } from "expo-router";
+import { Link, router } from "expo-router";
 
 export default function SignupScreen() {
   function handleSignup() {
@@ -41,6 +41,11 @@ export default function SignupScreen() {
           Registrar
         </Text>
       </TouchableOpacity>
+      <Link href="/login">
+        <Text style={styles.link}>
+          Já tem uma conta? Faça login
+        </Text>
+      </Link>
     </View>
   );
 }
@@ -76,5 +81,10 @@ const styles = StyleSheet.create({
   buttonText: {
     color: "#fff",
     fontWeight: "bold",
+  },
+
+    link: {
+    marginTop: 20,
+    textAlign: "center",
   },
 });
