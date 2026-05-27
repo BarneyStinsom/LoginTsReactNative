@@ -1,3 +1,4 @@
+import { LinearGradient } from "expo-linear-gradient";
 import {
   StyleSheet,
   Text,
@@ -14,21 +15,26 @@ export default function SignupScreen() {
   }
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Criar Conta</Text>
-
+  <LinearGradient
+    colors={["#0f0c29", "#302b63", "#24243e"]}
+    style={styles.container}
+    >
+      <Text style={styles.title}>Welcome! 🛸</Text>
       <TextInput
         placeholder="Nome"
+        placeholderTextColor="#fff"
         style={styles.input}
       />
 
       <TextInput
         placeholder="Email"
+        placeholderTextColor="#fff"
         style={styles.input}
       />
 
       <TextInput
         placeholder="Senha"
+        placeholderTextColor="#fff"
         secureTextEntry
         style={styles.input}
       />
@@ -46,7 +52,7 @@ export default function SignupScreen() {
           Já tem uma conta? Faça login
         </Text>
       </Link>
-    </View>
+    </LinearGradient>
   );
 }
 
@@ -58,22 +64,25 @@ const styles = StyleSheet.create({
   },
 
   title: {
+    color: "#fff",
     fontSize: 32,
     fontWeight: "bold",
     marginBottom: 30,
-     fontFamily: "Montserrat",
+    fontFamily: "Montserrat",
   },
 
   input: {
+    color: "fff",
     borderWidth: 1,
-    borderColor: "#ccc",
+    borderColor: "#ffffff",
     borderRadius: 15,
     padding: 15,
     marginBottom: 15,
   },
 
   button: {
-    backgroundColor: "#ff4fa0",
+    color: "#fff",
+    backgroundColor: "#5933ff",
     padding: 15,
     borderRadius: 15,
     alignItems: "center",
@@ -84,8 +93,10 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
 
-    link: {
+  link: {
+    color: "#fff",
     marginTop: 20,
     textAlign: "center",
+    fontFamily: "Montserrat"
   },
 });

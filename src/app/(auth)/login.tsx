@@ -11,11 +11,6 @@ import { Link, router } from "expo-router";
 
 export default function LoginScreen() {
   function handleLogin() {
-    // futuramente:
-    // validar email
-    // chamar API
-    // firebase auth
-
     router.replace("/(tabs)/home");
   }
 
@@ -28,11 +23,13 @@ return (
 
       <TextInput
         placeholder="Email"
+        placeholderTextColor= "#fff"
         style={styles.input}
       />
 
       <TextInput
         placeholder="Password"
+        placeholderTextColor= "#fff"
         secureTextEntry
         style={styles.input}
       />
@@ -56,13 +53,11 @@ return (
   );
 }
 
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
     padding: 30,
-
   },
 
   title: {
@@ -74,6 +69,7 @@ const styles = StyleSheet.create({
   },
 
   input: {
+    color: "fff",
     borderWidth: 1,
     borderColor: "#ffffff",
     borderRadius: 15,
