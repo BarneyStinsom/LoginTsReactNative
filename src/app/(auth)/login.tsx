@@ -3,18 +3,14 @@ import {
   StyleSheet,
   Text,
   TextInput,
-  TouchableOpacity,
-  View,
+  TouchableOpacity
 } from "react-native";
 
 import { Link, router } from "expo-router";
 
 export default function LoginScreen() {
   function handleLogin() {
-    // futuramente:
-    // validar email
-    // chamar API
-    // firebase auth
+ 
 
     router.replace("/(tabs)/home");
   }
