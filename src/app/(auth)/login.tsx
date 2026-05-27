@@ -1,3 +1,4 @@
+import { LinearGradient } from "expo-linear-gradient";
 import {
   StyleSheet,
   Text,
@@ -18,9 +19,12 @@ export default function LoginScreen() {
     router.replace("/(tabs)/home");
   }
 
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Welcome Back</Text>
+return (
+  <LinearGradient
+    colors={["#0f0c29", "#302b63", "#24243e"]}
+    style={styles.container}
+    >
+      <Text style={styles.title}>Welcome Back! 🚀</Text>
 
       <TextInput
         placeholder="Email"
@@ -44,37 +48,42 @@ export default function LoginScreen() {
 
       <Link href="/sign">
   <Text style={styles.link}>
-    Voltar
+    Create Account 
   </Text>
 </Link>
-    </View>
+    </LinearGradient>
+    
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
     padding: 30,
-    backgroundColor: "#fff",
+
   },
 
   title: {
+    color: "#fff",
     fontSize: 32,
     fontWeight: "bold",
     marginBottom: 30,
+    fontFamily: "Montserrat",
   },
 
   input: {
     borderWidth: 1,
-    borderColor: "#ccc",
+    borderColor: "#ffffff",
     borderRadius: 15,
     padding: 15,
     marginBottom: 15,
   },
 
   button: {
-    backgroundColor: "#ff4fa0",
+    color: "#fff",
+    backgroundColor: "#5933ff",
     padding: 15,
     borderRadius: 15,
     alignItems: "center",
@@ -86,7 +95,9 @@ const styles = StyleSheet.create({
   },
 
   link: {
+    color: "#fff",
     marginTop: 20,
     textAlign: "center",
+    fontFamily: "Montserrat"
   },
 });
