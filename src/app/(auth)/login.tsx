@@ -1,9 +1,9 @@
 import {
-    StyleSheet,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    View,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
 } from "react-native";
 
 import { Link, router } from "expo-router";
@@ -44,7 +44,7 @@ export default function LoginScreen() {
 
       <Link href="/sign">
   <Text style={styles.link}>
-    Criar conta
+    Voltar
   </Text>
 </Link>
     </View>
